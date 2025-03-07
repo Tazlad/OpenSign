@@ -1,7 +1,8 @@
-{$HOST_URL} {
-    reverse_proxy client:3000
-    handle_path /app/* {
-        reverse_proxy server:8080
-            rewrite * /app{uri}
-    }
+
+form.uniqueneeds.au {
+    reverse_proxy formbricks:8000
+}
+
+sign.uniqueneeds.au {
+    reverse_proxy opensign:3000
 }
